@@ -133,6 +133,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
 debug.egl.hw=0
+debug.sf.disable_backpressure=1
 debug.sf.hw=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
