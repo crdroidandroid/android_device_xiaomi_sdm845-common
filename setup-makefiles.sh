@@ -20,6 +20,21 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"device/xiaomi/sdm845-common",
+		"hardware/qcom-caf/common/libqti-perfd-client",
+		"hardware/qcom-caf/sdm845",
+		"hardware/qcom-caf/wlan",
+		"hardware/xiaomi",
+		"vendor/qcom/opensource/commonsys-intf/display",
+		"vendor/qcom/opensource/commonsys/display",
+		"vendor/qcom/opensource/display",
+		"vendor/qcom/opensource/dataservices",
+		"vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
+EOF
+}
+
 # Initialize the helper for common
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
