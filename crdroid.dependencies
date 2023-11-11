@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "crdroidandroid/android_kernel_xiaomi_sdm845",
+    "target_path": "kernel/xiaomi/sdm845"
+  },
+  {
+    "repository": "crdroidandroid/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  }
+]
