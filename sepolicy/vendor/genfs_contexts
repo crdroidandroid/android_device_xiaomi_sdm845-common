@@ -1,5 +1,5 @@
-genfscon proc /sys/kernel/sched_autogroup_enabled     u:object_r:proc_sysctl_autogroup:s0
-genfscon proc /sys/kernel/sched_boost                 u:object_r:proc_sysctl_schedboost:s0
+genfscon proc /sys/kernel/sched_autogroup_enabled     u:object_r:proc_sched:s0
+genfscon proc /sys/kernel/sched_boost                 u:object_r:proc_sched:s0
 genfscon proc /tp_fw_version       u:object_r:proc_tp:s0
 genfscon proc /tp_lockdown_info    u:object_r:proc_tp:s0
 
@@ -18,14 +18,6 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/fingerdown_wait       u
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/irq                   u:object_r:sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable         u:object_r:sysfs_fingerprint:s0
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/proximity_state    u:object_r:sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpubw                            u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                            u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys2/restart_level    u:object_r:sysfs_ssr_toggle:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys3/restart_level   u:object_r:sysfs_ssr_toggle:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu0                          u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu4                          u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,llccbw                           u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw                         u:object_r:sysfs_msm_subsys:s0
-genfscon sysfs /power/rpmh_stats/master_stats                                  u:object_r:sysfs_rpm:s0
-genfscon sysfs /power/system_sleep/stats                                       u:object_r:sysfs_system_sleep_stats:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps       u:object_r:sysfs_graphics:s0
