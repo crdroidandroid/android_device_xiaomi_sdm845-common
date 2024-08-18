@@ -48,6 +48,12 @@ function lib_to_package_fixup_vendor_variants() {
             vendor.qti.imsrtpservice@2.1)
             echo "$1_vendor"
             ;;
+        libOmxCore | \
+            libgrallocutils | \
+            libwifi-hal-ctrl | \
+            libwpa_client)
+            # Android.mk only packages
+            ;;
         *)
             return 1
             ;;
