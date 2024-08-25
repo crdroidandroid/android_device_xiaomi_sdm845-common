@@ -79,6 +79,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libgui_shim.so" "${2}" || ${PATCHELF} --add-needed "libgui_shim.so" "${2}"
             ;;
+        system_ext/lib/libwfdservice.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
+            ;;
         vendor/bin/pm-service)
             [ "$2" = "" ] && return 0
             grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
