@@ -48,6 +48,12 @@ function lib_to_package_fixup_vendor_variants() {
             vendor.qti.imsrtpservice@2.1)
             echo "$1_vendor"
             ;;
+        libprotobuf-cpp-lite)
+            echo "libprotobuf-cpp-lite-vendorcompat"
+            ;;
+        libprotobuf-cpp-full)
+            echo "libprotobuf-cpp-full-vendorcompat"
+            ;;
         libOmxCore | \
             libgrallocutils | \
             libwifi-hal-ctrl | \
