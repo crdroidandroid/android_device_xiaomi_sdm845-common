@@ -40,7 +40,9 @@ function lib_to_package_fixup_vendor_variants() {
         return 1
     fi
     case "$1" in
-        com.qualcomm.qti.dpm.api@1.0)
+        com.qualcomm.qti.dpm.api@1.0 | \
+            vendor.qti.imsrtpservice@2.0 | \
+            vendor.qti.imsrtpservice@2.1)
             echo "$1_vendor"
             ;;
         *)
