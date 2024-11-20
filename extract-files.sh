@@ -85,7 +85,7 @@ function blob_fixup() {
             ;;
         vendor/bin/pm-service)
             [ "$2" = "" ] && return 0
-            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
+            grep -q libutils-v32.so "${2}" || "${PATCHELF}" --add-needed "libutils-v32.so" "${2}"
             ;;
         vendor/lib/camera/components/com.qti.node.watermark.so)
             [ "$2" = "" ] && return 0
