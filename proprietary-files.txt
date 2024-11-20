@@ -24,6 +24,7 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Audio
 vendor/lib64/hw/audio.primary.sdm845.so
+vendor/lib64/libacdbloader.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
@@ -36,6 +37,7 @@ vendor/lib64/libcsd-client.so
 vendor/lib64/libqtigef.so
 vendor/lib/hw/audio.primary.sdm845.so
 vendor/lib/vndk/libxlog.so
+vendor/lib/libacdbloader.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
@@ -77,6 +79,14 @@ vendor/lib64/soundfx/libshoebox.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libshoebox.so
+
+# Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/libbtnv.so
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/libbtnv.so
 
 # Bluetooth (A2DP)
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
@@ -150,7 +160,6 @@ vendor/lib64/libcneoplookup.so
 vendor/lib64/libcneqmiutils.so
 vendor/lib64/libwms.so
 vendor/lib64/libwqe.so;DISABLE_CHECKELF
-vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.data.factory@2.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
 vendor/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
@@ -236,7 +245,6 @@ vendor/lib64/libdpmqmihal.so|2656dc27e2da38a482d639701647520d259ff50b
 vendor/bin/qseecomd
 vendor/bin/seemp_healthd
 vendor/etc/init/qseecomd.rc
-vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libGPreqcancel.so
@@ -274,6 +282,10 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib/vendor.qti.esepowermanager@1.0.so
+
+# FM
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -338,25 +350,12 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6
 
 # IMS
 product/app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk
-product/lib64/com.qualcomm.qti.imscmservice@1.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@1.0.so
-product/lib64/com.qualcomm.qti.imscmservice@2.0.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.0.so
-product/lib64/com.qualcomm.qti.imscmservice@2.1.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.1.so
-product/lib64/com.qualcomm.qti.imscmservice@2.2.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
-product/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
-product/lib64/com.qualcomm.qti.uceservice@2.1.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
 product/lib64/libimscamera_jni.so:system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so:system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 product/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvt.so:system_ext/lib64/lib-imsvt.so
 product/lib64/lib-imsvtextutils.so:system_ext/lib64/lib-imsvtextutils.so
 product/lib64/lib-imsvtutils.so:system_ext/lib64/lib-imsvtutils.so
-product/lib64/vendor.qti.hardware.radio.ims@1.0.so:system_ext/lib64/vendor.qti.hardware.radio.ims@1.0.so
-product/lib64/vendor.qti.hardware.radio.ims@1.1.so:system_ext/lib64/vendor.qti.hardware.radio.ims@1.1.so
-product/lib64/vendor.qti.hardware.radio.ims@1.2.so:system_ext/lib64/vendor.qti.hardware.radio.ims@1.2.so
-product/lib64/vendor.qti.hardware.radio.ims@1.3.so:system_ext/lib64/vendor.qti.hardware.radio.ims@1.3.so
-product/lib64/vendor.qti.hardware.radio.ims@1.4.so:system_ext/lib64/vendor.qti.hardware.radio.ims@1.4.so
-product/lib64/vendor.qti.ims.callinfo@1.0.so:system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
-product/lib64/vendor.qti.ims.rcsconfig@1.0.so:system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so:system_ext/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so:system_ext/lib64/vendor.qti.imsrtpservice@2.1.so
 product/priv-app/ims/ims.apk:system_ext/priv-app/ims/ims.apk
@@ -415,6 +414,18 @@ vendor/firmware/ipa_fws.mdt
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib/libkeymasterprovision.so
+vendor/lib/libkeymasterutils.so
+
 # Listen
 vendor/lib64/hw/sound_trigger.primary.sdm845.so|36f4868c560deaffc07e661893e145167d707fbe
 vendor/lib64/libcapiv2svacnn.so
@@ -423,7 +434,6 @@ vendor/lib64/libgcs-calwrapper.so
 vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
-vendor/lib64/libjnihelper.so
 vendor/lib64/liblistenjni.so
 vendor/lib64/liblistensoundmodel2.so
 vendor/lib64/libmulawdec.so
@@ -435,7 +445,6 @@ vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
-vendor/lib/libjnihelper.so
 vendor/lib/liblistenjni.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
@@ -584,6 +593,7 @@ vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
+vendor/lib64/libxml.so
 vendor/lib64/qcrild_librilutils.so
 vendor/lib64/qtibus.so
 vendor/lib64/qtimutex.so
@@ -620,6 +630,7 @@ vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/librilqmiservices.so
 vendor/lib/libsettings.so
 vendor/lib/libsystem_health_mon.so
+vendor/lib/libxml.so
 vendor/lib/qcrild_librilutils.so
 vendor/lib/qtimutex.so
 vendor/radio/qcril_database/qcril.db
@@ -629,35 +640,6 @@ vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
-
-# Sensors
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
-vendor/bin/sensors.qti
-vendor/bin/sscrpcd
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib64/libsensorcal.so
-vendor/lib64/libsensorslog.so
-vendor/lib64/libssc.so
-vendor/lib64/libssc_default_listener.so
-vendor/lib64/libssccalapi.so
-vendor/lib64/libsns_device_mode_stub.so
-vendor/lib64/libsns_fastRPC_util.so
-vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib64/libsnsdiaglog.so
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
-vendor/lib/libsensorcal.so
-vendor/lib/libsensorslog.so
-vendor/lib/libssc.so
-vendor/lib/libssc_default_listener.so
-vendor/lib/libssccalapi.so
-vendor/lib/libsns_device_mode_stub.so
-vendor/lib/libsns_fastRPC_util.so
-vendor/lib/libsns_low_lat_stream_stub.so
-vendor/lib/libsnsdiaglog.so
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine
 vendor/etc/scve/facereco/gModel.dat
@@ -840,7 +822,6 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so|91837ba6b6692e1d553ece3aa4469dd
 vendor/lib/libwfdutils_proprietary.so|cae4c266704da4ce15b59c13f57ccf8f1391b699
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor|fdba1b3c11ace4b0415be4e5944cdb288cd35f58
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|044c6cfd4bc603e4aa372ab1a3d287a8d8e5fc48
-vendor/lib64/libwfdhdcpcp.so|ba43f54ee4e34562b31c9595d2ad0639033e8fdc
 
 # WiFi Display (vendor) - from lemonadep - TP1A.220624.003
 vendor/etc/wfdconfig.xml|4f863ac9a71bafff8afc14e8fab26af979bbb1d6
