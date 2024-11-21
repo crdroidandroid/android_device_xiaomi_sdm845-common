@@ -1,6 +1,6 @@
 # Copyright (C) 2009 The Android Open Source Project
 # Copyright (c) 2011, The Linux Foundation. All rights reserved.
-# Copyright (C) 2017-2024 The LineageOS Project
+# Copyright (C) 2017-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,13 +16,6 @@
 
 import common
 import re
-
-def FullOTA_InstallBegin(info):
-  AddImage(info, "RADIO", "super_dummy.img", "/tmp/super_dummy.img");
-  info.script.AppendExtra('package_extract_file("install/bin/flash_super_dummy.sh", "/tmp/flash_super_dummy.sh");')
-  info.script.AppendExtra('set_metadata("/tmp/flash_super_dummy.sh", "uid", 0, "gid", 0, "mode", 0755);')
-  info.script.AppendExtra('run_program("/tmp/flash_super_dummy.sh");')
-  return
 
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
@@ -40,8 +33,8 @@ def IncrementalOTA_Assertions(info):
   AddTrustZoneAssertion(info, info.target_zip)
   return
 
-def AddImage(info, dir, basename, dest):
-  path = dir + "/" + basename
+def AddImage(info, basename, dest):
+  path = "IMAGES/" + basename
   if path not in info.input_zip.namelist():
     return
 
@@ -51,8 +44,8 @@ def AddImage(info, dir, basename, dest):
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def OTA_InstallEnd(info):
-  AddImage(info, "IMAGES", "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
-  AddImage(info, "IMAGES", "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
+  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
+  AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   return
 
 def AddTrustZoneAssertion(info, input_zip):
