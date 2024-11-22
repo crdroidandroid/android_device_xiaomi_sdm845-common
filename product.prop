@@ -11,3 +11,9 @@ ro.lmk.swap_free_low_percentage=15
 
 # eBPF
 ro.bpf.kver_override=5.4.299
+
+# FUN time
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
+ro.secure=0
