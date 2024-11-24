@@ -310,6 +310,7 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor:64
 
 # Recovery
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
 
