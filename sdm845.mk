@@ -374,10 +374,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
