@@ -61,7 +61,6 @@ vendor/lib/soundfx/libshoebox.so
 # Bluetooth (A2DP) - from Sony SM8250-common
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti;DISABLE_DEPS
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
