@@ -3,6 +3,7 @@ allow vendor_thermal-engine vendor_thermal_data_file:file create_file_perms;
 
 allow vendor_thermal-engine self:capability { chown fowner };
 allow vendor_thermal-engine vendor_sysfs_devfreq:dir r_dir_perms;
+allow vendor_thermal-engine vendor_sysfs_devfreq:file rw_file_perms;
 
 set_prop(vendor_thermal-engine, vendor_thermal_engine_prop)
 
