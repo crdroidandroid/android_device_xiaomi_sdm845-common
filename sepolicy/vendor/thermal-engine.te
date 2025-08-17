@@ -6,6 +6,3 @@ allow vendor_thermal-engine vendor_sysfs_devfreq:dir r_dir_perms;
 allow vendor_thermal-engine vendor_sysfs_devfreq:file rw_file_perms;
 
 set_prop(vendor_thermal-engine, vendor_thermal_engine_prop)
-
-dontaudit vendor_thermal-engine sysfs:dir read;
-dontaudit vendor_thermal-engine self:capability dac_override;
