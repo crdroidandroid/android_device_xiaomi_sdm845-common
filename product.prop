@@ -10,4 +10,4 @@ ro.lmk.swap_util_max=100
 ro.lmk.swap_free_low_percentage=15
 
 # eBPF
-ro.bpf.kver_override=5.4.186
+ro.bpf.kver_override=5.4.299
