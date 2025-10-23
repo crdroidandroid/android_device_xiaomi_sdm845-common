@@ -8,20 +8,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.graphics.allocator</name>
-        <interface>
-            <name>IAllocator</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.graphics.composer3</name>
-        <interface>
-            <name>IComposer</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
        <name>android.hardware.biometrics.fingerprint</name>
         <version>2.0-3</version>
         <interface>
@@ -66,14 +52,6 @@
         <version>1</version>
         <interface>
            <name>IHealth</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-       <name>android.hardware.light</name>
-        <version>2</version>
-        <interface>
-           <name>ILights</name>
            <instance>default</instance>
         </interface>
     </hal>
@@ -212,30 +190,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-       <name>vendor.display.color</name>
-        <version>1.0-5</version>
-        <interface>
-           <name>IDisplayColor</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-       <name>vendor.display.config</name>
-        <version>2.0</version>
-        <interface>
-           <name>IDisplayConfig</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-       <name>vendor.display.postproc</name>
-        <version>1.0</version>
-        <interface>
-           <name>IDisplayPostproc</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
        <name>vendor.goodix.hardware.fingerprintextension</name>
         <version>1.0</version>
         <interface>
@@ -361,32 +315,6 @@
         <version>1.0</version>
         <interface>
            <name>ILinkLatency</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.display.allocator</name>
-        <version>3.0</version>
-        <version>4.0</version>
-        <interface>
-           <name>IQtiAllocator</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.display.composer</name>
-        <version>3.0</version>
-        <interface>
-           <name>IQtiComposer</name>
-           <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.display.mapper</name>
-        <version>3.0</version>
-        <version>4.0</version>
-        <interface>
-           <name>IQtiMapper</name>
            <instance>default</instance>
         </interface>
     </hal>
